@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import { View, Text } from 'react-native';
+import styled from '@emotion/native'
 import './App.css';
+
+import { Day } from './components'
+
+const Week = styled.View`
+  flex-direction: column;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Week>
+      <Day name="Monday" />
+      <Day name="Tuesday" />
+      <Day name="Wednesday" />
+      <Day name="Thursday" />
+      <Day name="Friday" />
+    </Week>
   );
 }
 
