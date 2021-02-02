@@ -1,24 +1,21 @@
-import React from 'react';
-import { View, Text } from 'react-native';
-import styled from '@emotion/native'
-import './App.css';
+import React from "react";
+import styled from "@emotion/native";
+import "./App.css";
 
-import { Day } from './components'
+import { Day } from "./components";
 
-const Week = styled.View`
-  flex-direction: column;
-`;
+const Week = styled.View({
+  flexDirection: "row",
+});
 
-function App() {
-  return (
-    <Week>
-      <Day name="Monday" />
-      <Day name="Tuesday" />
-      <Day name="Wednesday" />
-      <Day name="Thursday" />
-      <Day name="Friday" />
-    </Week>
-  );
-}
+const App = () => (
+  <Week>
+    <Day name="Monday" />
+    <Day name="Tuesday" />
+    <Day name="Wednesday" />
+    <Day name="Thursday" />
+    <Day name="Friday" />
+  </Week>
+);
 
 export default App;
